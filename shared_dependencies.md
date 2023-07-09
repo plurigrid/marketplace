@@ -1,17 +1,17 @@
 Shared Dependencies:
 
-1. Imported Libraries: All files will share the imported libraries 'chyp', 'hypergraphx', and 'polars' from pip. 
+1. Python Packages: All files will share the Python packages `chyp`, `hypergraphx`, and `polars` as dependencies. These packages will be imported in each file as needed.
 
-2. Data Schemas: The data schemas for energy, services, and compute credits will be shared across the marketplace files (energy_marketplace.py, services_marketplace.py, compute_marketplace.py).
+2. Data Schemas: The data schemas for `Energy`, `Services`, and `Compute` will be shared across the `energy_marketplace.py`, `services.py`, and `compute.py` files. These schemas will define the structure of the data being exchanged in the marketplace.
 
-3. Function Names: Functions for creating, updating, and deleting credits will be shared across the marketplace files. Functions for visualizing the hypergraph and string diagrams will be shared in hypergraph_visualization.py and string_diagrams.py.
+3. Function Names: Functions such as `exchange_energy()`, `exchange_services()`, `exchange_compute()`, `visualize_hypergraph()`, and `generate_string_diagram()` will be shared across multiple files. These functions will be defined in their respective files and imported as needed.
 
-4. Message Names: Message names for successful transactions, errors, and updates will be shared across all files.
+4. Hypergraph: The `Hypergraph` class from `hypergraph.py` will be shared across `main.py`, `energy_marketplace.py`, `services.py`, `compute.py`, and `visualization.py` for the creation and manipulation of the hypergraph.
 
-5. Utility Functions: Utility functions for data validation, error handling, and other common tasks will be shared in utils.py.
+5. String Diagrams: The `StringDiagram` class from `string_diagrams.py` will be shared across `main.py`, `energy_marketplace.py`, `services.py`, `compute.py`, and `visualization.py` for the visualization of the hypergraph.
 
-6. Constants: Constants like the marketplace names, credit types, and other configuration values will be shared across all files.
+6. Test Cases: The test cases defined in the `tests` directory will share the `unittest` Python package as a dependency. They will also share the `setUp()` and `tearDown()` methods for setting up and cleaning up the test environment.
 
-7. Variables: Variables for the current state of the marketplaces, the hypergraph, and the string diagrams will be shared across all files.
+7. Requirements.txt: This file will list all the shared dependencies for the project, including the Python packages `chyp`, `hypergraphx`, and `polars`.
 
-Note: As this is a Python project, there are no DOM elements for JavaScript functions.
+8. Message Names: Message names such as `EXCHANGE_SUCCESS`, `EXCHANGE_FAILURE`, `VISUALIZATION_SUCCESS`, and `VISUALIZATION_FAILURE` will be shared across multiple files to standardize communication and error handling.
